@@ -11,16 +11,20 @@ const Navbar = () => {
   }
 
   return (
-    <header>
+    <header className='py-8 bg-base-300'>
       <div className="container">
         <Link to="/">
-          <h1>Portfolio</h1>
+          <h1 className='text-3xl text-white'>Clearcoin</h1>
         </Link>
         <nav>
           {user && (
             <div>
               <span>{user.email}</span>
-              <button onClick={handleClick}>Log out</button>
+
+              <Link to="/portfolio">
+                <h1 className='btn btn-accent'>Portfolio</h1>
+              </Link>
+              <button className='btn btn-accent' onClick={handleClick}>Log out</button>
             </div>
           )}
           {!user && (
@@ -32,6 +36,10 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
+
+
+
+
   )
 }
 

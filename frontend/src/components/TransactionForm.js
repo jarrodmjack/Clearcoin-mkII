@@ -47,8 +47,8 @@ const TransactionForm = () => {
   }
 
   return (
-    <form className="create" onSubmit={handleSubmit}>
-      <h3>Add a New Transaction</h3>
+    <form className="create bg-base-300 m-0 p-4 h-min rounded-2xl" onSubmit={handleSubmit}>
+      <h3 className="mb-8 text-xl">Add a New Transaction</h3>
 
       <label>Currency Name</label>
       <input
@@ -74,7 +74,7 @@ const TransactionForm = () => {
         className={emptyFields.includes('qty') ? 'error' : ''}
       />
 
-      <button>Add Transaction</button>
+      <button className="btn btn-accent w-full">Add Transaction</button>
       {error && <div className="error">{error}</div>}
     </form>
   )

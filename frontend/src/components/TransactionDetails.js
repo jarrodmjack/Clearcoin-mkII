@@ -27,8 +27,8 @@ const TransactionDetails = ({ transaction }) => {
   }
 
   return (
-    <div className="transaction-details">
-      <h4>{transaction.currencyName}</h4>
+    <div className="transaction-details card bg-base-300 p-8 mb-10">
+      <h4 className='text-accent text-2xl'>{transaction.currencyName}</h4>
       <p><strong>Price: </strong>${transaction.price} CAD</p>
       <p><strong>Qty: </strong>{transaction.qty}</p>
       <p>{formatDistanceToNow(new Date(transaction.createdAt), { addSuffix: true })}</p>
