@@ -1,14 +1,23 @@
 import { useTransactionsContext } from '../hooks/useTransactionsContext'
-
+import { useAuthContext } from '../hooks/useAuthContext'
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const TransactionDetails = ({ transaction }) => {
   const { dispatch } = useTransactionsContext()
+  const { user } = useAuthContext()
 
   const handleClick = async () => {
+    
+    if(!user){
+      return
+    }
+
     const response = await fetch('/api/transactions/' + transaction._id, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${user.token}`
+      }
     })
     const json = await response.json()
 
