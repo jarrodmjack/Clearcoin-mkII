@@ -18,23 +18,19 @@ const TrendingSection = () => {
         return
     }
 
-    console.log(trendingCurrencies)
 
     return (
         <div className="card w-96 bg-base-300 shadow-xl">
             <div className="card-body">
-                <h2 className="card-title">🔥 Trending</h2>
-                <div>
-                    <span>1</span>
-                    {trendingCurrencies[0].item.name}
+                <h2 className="card-title mb-2">🔥 Trending</h2>
+                <div className="flex gap-4">
+                    <span>🚀</span><p>{trendingCurrencies[0].item.name}</p>
                 </div>
-                <div>
-                    <span>2</span>
-                    {trendingCurrencies[1].item.name}
+                <div className="flex gap-4">
+                    <span>🚀</span><p>{trendingCurrencies[1].item.name}</p>
                 </div>
-                <div>
-                    <span>3</span>
-                    {trendingCurrencies[2].item.name}
+                <div className="flex gap-4">
+                    <span>🚀</span><p>{trendingCurrencies[2].item.name}</p>
                 </div>
             </div>
         </div>

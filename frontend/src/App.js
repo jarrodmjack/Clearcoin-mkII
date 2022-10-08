@@ -7,6 +7,8 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Portfolio from './pages/Portfolio'
+import Footer from './components/Footer'
+import CurrencyCarousel from './components/CurrencyCarousel'
 
 function App() {
   const { user } = useAuthContext()
@@ -14,6 +16,7 @@ function App() {
   return (
     <div className="App bg-base-100">
       <BrowserRouter>
+      <CurrencyCarousel />
         <Navbar />
         <div className="pages">
           <Routes>
@@ -35,6 +38,7 @@ function App() {
             />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -41,12 +41,12 @@ const Portfolio = () => {
 
     return (
         <div className="home">
+            <TransactionForm />
             <div className="transactions">
                 {transactions && transactions.map((transaction) => (
                     <TransactionDetails key={transaction._id} transaction={transaction} />
                 ))}
             </div>
-            <TransactionForm />
         </div>
     )
 }

@@ -1,0 +1,3 @@
+Make trending currency section
+bring currency converter in to home page
+make news page

@@ -55,7 +55,7 @@ const TransactionForm = () => {
         type="text"
         onChange={(e) => setCurrencyName(e.target.value)}
         value={currencyName}
-        className={emptyFields.includes('currencyName') ? 'error' : ''}
+        className={emptyFields.includes('currencyName') ? 'error' : 'bg-base-100'}
       />
 
       <label>Price</label>
@@ -63,7 +63,7 @@ const TransactionForm = () => {
         type="number"
         onChange={(e) => setPrice(e.target.value)}
         value={price}
-        className={emptyFields.includes('price') ? 'error' : ''}
+        className={emptyFields.includes('price') ? 'error' : 'bg-base-100'}
       />
 
       <label>Qty</label>
@@ -71,7 +71,7 @@ const TransactionForm = () => {
         type="number"
         onChange={(e) => setQty(e.target.value)}
         value={qty}
-        className={emptyFields.includes('qty') ? 'error' : ''}
+        className={emptyFields.includes('qty') ? 'error' : 'bg-base-100'}
       />
 
       <button className="btn btn-accent w-full">Add Transaction</button>
