@@ -1,3 +1,2 @@
-Make trending currency section
-bring currency converter in to home page
-make news page
+create fear/greed index page
+get news API working

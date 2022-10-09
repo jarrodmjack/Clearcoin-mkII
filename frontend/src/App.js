@@ -9,6 +9,8 @@ import Signup from './pages/Signup'
 import Portfolio from './pages/Portfolio'
 import Footer from './components/Footer'
 import CurrencyCarousel from './components/CurrencyCarousel'
+import News from './pages/News'
+import FearAndGreed from './pages/FearAndGreed'
 
 function App() {
   const { user } = useAuthContext()
@@ -23,6 +25,14 @@ function App() {
             <Route
               path="/"
               element={<Home />}
+            />
+            <Route
+              path="/fgindex"
+              element={<FearAndGreed />}
+            />
+            <Route
+              path="/news"
+              element={<News />}
             />
              <Route
               path="/portfolio"
@@ -43,5 +53,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

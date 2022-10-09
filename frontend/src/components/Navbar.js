@@ -19,10 +19,15 @@ const Navbar = () => {
         <nav>
           {user && (
             <div>
-              <span>{user.email}</span>
-
+              {/* <span>{user.email}</span> */}
+              <Link to='/fgindex'>
+                <p className='btn btn-accent'>Market Sentiment</p>
+              </Link>
+              <Link to='/news'>
+                <p className='btn btn-accent'>News</p>
+              </Link>
               <Link to="/portfolio">
-                <h1 className='btn btn-accent'>Portfolio</h1>
+                <p className='btn btn-accent'>Portfolio</p>
               </Link>
               <button className='btn btn-accent' onClick={handleClick}>Log out</button>
             </div>
