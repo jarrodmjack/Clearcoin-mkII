@@ -22,20 +22,22 @@ const FearAndGreed = () => {
         fetchFearGreedHistory()
     }, [])
 
-    console.log(fearGreedHistory)
+    // console.log(fearGreedHistory,' 111')
 
 
     return (
         <div className=''>
             <h1 className='text-center text-2xl mb-20'>Today's market sentiment is {todaysFGSentiment} which may indicate a good <span className='font-bold'>{todaysFGIndex >= 50 ? 'selling' : 'buying'} opportunity.</span></h1>
-            <div className='flex justify-around mb-20'>
+            <div className='flex flex-wrap justify-around mb-20'>
                 <FearAndGreedIndex />
                 <FearAndGreedHistory history={fearGreedHistory} />
             </div>
             <div className='h-96'>
-            <ApexChart history={fearGreedHistory} />
+                {fearGreedHistory.length > 0 && (
+                <ApexChart history={fearGreedHistory} />
+                )}
             </div>
-            <div className=''>
+            <div className='text-center lg:text-left'>
                 <h3 className='text-2xl mb-4'>The Fear and Greed index is used to measure general cryptocurrency market sentiment.</h3>
                 <ul className=''>
                     <li className='mb-2'>- A lower score, leaning towards fear, may indicate that investors are worried about which way the market will go, which could mean it is a good buying opportunity.</li>

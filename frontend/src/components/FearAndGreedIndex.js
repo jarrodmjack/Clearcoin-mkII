@@ -5,7 +5,7 @@ const FearAndGreedIndex = () => {
     
 
   return (
-    <div className='card w-96 bg-base-300 shadow-xl'>
+    <div className='card w-96 bg-base-300 shadow-xl mb-20 lg:m-0'>
       <a href='https://alternative.me/crypto/fear-and-greed-index/' target='_blank'>
         <img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Latest Crypto Fear and Greed Index" />
         </a>

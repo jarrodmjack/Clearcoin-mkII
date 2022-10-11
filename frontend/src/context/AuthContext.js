@@ -14,11 +14,7 @@ export const authReducer = (state, action) => {
 }
 
 export const AuthContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(authReducer, {
-        user: {
-            email: '',
-        }
-    })
+    const [state, dispatch] = useReducer(authReducer, JSON.parse(localStorage.getItem('user')))
 
     // check for token in local storage to see if there is already a user logged in
 
