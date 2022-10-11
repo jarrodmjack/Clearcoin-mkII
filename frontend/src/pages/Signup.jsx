@@ -17,7 +17,7 @@ const Signup = () => {
 
     return (
         <form className="signup bg-base-300" onSubmit={handleSubmit}>
-            <h3>Sign up</h3>
+            <h3 className="text-center mb-10 text-2xl text-white">Sign up</h3>
             <label>Email</label>
             <input
                 className="bg-base-100"
