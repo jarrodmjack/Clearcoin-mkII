@@ -41,7 +41,7 @@
     <a href="https://github.com/jarrodmjack/Clearcoin-mkII"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jarrodmjack/Clearcoin-mkII">View Demo</a>
+    <a href="https://clearcoin.cyclic.app/">View Demo</a>
     ·
     <a href="https://github.com/jarrodmjack/Clearcoin-mkII/issues">Report Bug</a>
     ·
