@@ -137,7 +137,25 @@ form.signup, form.login {
 }
 
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #232729;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(10, 10, 10);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(16, 16, 16);
+}
 
 /* Header styles */
 
