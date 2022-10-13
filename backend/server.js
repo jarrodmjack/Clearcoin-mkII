@@ -3,6 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const transactionRoutes = require('./routes/transactions')
 const userRoutes = require('./routes/userRoutes')
+const path = require('path')
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
