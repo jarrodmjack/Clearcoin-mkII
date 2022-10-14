@@ -6,7 +6,7 @@ const userRoutes = require('./routes/userRoutes')
 const path = require('path')
 
 //Use .env file in config folder
-require("dotenv").config({ path: "./config/.env" });
+require("dotenv").config();
 
 // express app
 const app = express()
