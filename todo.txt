@@ -1,2 +1,1 @@
-create fear/greed index page
 get news API working
