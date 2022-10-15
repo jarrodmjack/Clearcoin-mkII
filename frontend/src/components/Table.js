@@ -27,7 +27,7 @@ const Table = () => {
                         <th>Price</th>
                         <th>Market Cap (CAD)</th>
                         <th>Circulating Supply</th>
-                        <th>24h Volume(CAD)</th>
+                        <th>24h Volume (CAD)</th>
                         <th>24h %</th>
                     </tr>
                 </thead>

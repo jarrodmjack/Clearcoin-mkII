@@ -18,7 +18,7 @@ const News = () => {
         }
         fetchNews()
     }, [])
-console.log(news)
+
     return (
         <div className='mt-10'>
             <h1 className='text-2xl'>Like crypto news? Here is the latest in crypto news</h1>
