@@ -7,13 +7,10 @@ const TopExchangesSection = () => {
     const [trendingExchanges, setTrendingExchanges] = useState([])
 
     useEffect(() => {
-        console.log('useEffect')
+
         const fetchExchanges = async () => {
-            console.log('fetchexchanges')
             const res = await fetch('https://api.coingecko.com/api/v3/exchanges?per_page=5')
             const data = await res.json()
-            console.log(res)
-            console.log(data)
             setTrendingExchanges(data)
         }
         fetchExchanges()

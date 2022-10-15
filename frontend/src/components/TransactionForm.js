@@ -41,7 +41,6 @@ const TransactionForm = () => {
       setQty('')
       setError(null)
       setEmptyFields([])
-      console.log('new transactions added', json)
       dispatch({ type: 'CREATE_TRANSACTION', payload: json })
     }
   }

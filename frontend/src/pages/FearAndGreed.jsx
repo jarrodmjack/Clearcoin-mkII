@@ -22,7 +22,6 @@ const FearAndGreed = () => {
         fetchFearGreedHistory()
     }, [])
 
-    // console.log(fearGreedHistory,' 111')
 
 
     return (

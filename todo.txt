@@ -1,1 +1,4 @@
 get news API working
+change favicon
+fix footer
+update build steps in read me

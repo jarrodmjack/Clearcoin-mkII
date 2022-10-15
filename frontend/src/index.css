@@ -160,3 +160,8 @@ form.signup, form.login {
 /* Header styles */
 
 
+.hoverBox:hover{
+  transition: ease-in-out .2s;
+  -webkit-box-shadow: 0px 0px 21px -1px rgba(102,194,196,0.85); 
+box-shadow: 0px 0px 21px -1px rgba(102,194,196,0.85);
+}

@@ -13,7 +13,7 @@ const Portfolio = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        console.log(user)
+        // console.log(user)
         if (!user) {
             navigate('/login')
         }

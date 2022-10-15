@@ -3,6 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const transactionRoutes = require('./routes/transactions')
 const userRoutes = require('./routes/userRoutes')
+const newsRoutes = require('./routes/newsRoutes')
 const path = require('path')
 
 
@@ -36,6 +37,7 @@ app.use((req, res, next) => {
 
 app.use('/api/transactions', transactionRoutes)
 app.use('/api/user', userRoutes)
+app.use('/api/news', newsRoutes)
 
 app.use(express.static(path.join(__dirname, '../frontend/build')))
 app.get("*", (req, res) =>
