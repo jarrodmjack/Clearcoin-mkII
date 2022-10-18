@@ -1,3 +1,5 @@
-Change transaction coin name input to dropdown of currencies
 fix footer
 update build steps in read me
+brighten text (hard to read on grey background)
+put target_blank on news linked
+add sort functionality to table

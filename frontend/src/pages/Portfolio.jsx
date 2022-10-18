@@ -12,11 +12,11 @@ const Portfolio = () => {
     const { user } = useAuthContext()
     const navigate = useNavigate()
     const [currencies, setCurrencies] = useState([])
-    
-    
+    const [profitOrLoss, setProfitOrLoss] = useState(0)
+    // const [portfolioBalance, setPortfolioBalance] = useState(0)
+
     // getting transactions from backend for user
     useEffect(() => {
-        // console.log(user)
         if (!user) {
             navigate('/login')
         }
@@ -29,36 +29,36 @@ const Portfolio = () => {
                     }
                 })
                 const json = await response.json()
-
                 if (response.ok) {
                     dispatch({ type: 'SET_TRANSACTIONS', payload: json })
                 }
             }
-            if (user) {
-                fetchTransactions()
-            }
+            fetchTransactions()
         }
-
+        // fetching current market data to compare against portfolio
         const fetchMarketCurrencies = async () => {
             const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=200&page=1&sparkline=false')
             const data = await res.json()
             setCurrencies(data)
         }
         fetchMarketCurrencies()
-
     }, [dispatch, user])
 
 
-
     return (
-        <div className="home">
-            <TransactionForm currencies={currencies} />
-            <div className="transactions">
-                {transactions && transactions.map((transaction) => (
-                    <TransactionDetails key={transaction._id} transaction={transaction} />
-                ))}
+        <>
+            <h1>Portfolio Balance ${transactions && transactions.reduce((acc, c) => acc + (c.price * c.qty), 0)}CAD</h1>
+            <h2>Total Change ${transactions && currencies && transactions.reduce((acc, trans) => acc + (trans.price - currencies.find(cur => cur.name === trans.currencyName).current_price) * trans.qty, 0).toFixed(2)}CAD</h2>
+            <div className="home">
+                <TransactionForm currencies={currencies} />
+                <div className="transactions">
+                    {transactions && transactions.map((transaction) => (
+                        <TransactionDetails key={transaction._id} transaction={transaction} />
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
+
     )
 }
 

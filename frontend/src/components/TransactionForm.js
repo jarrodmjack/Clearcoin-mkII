@@ -5,7 +5,7 @@ import { useAuthContext } from "../hooks/useAuthContext"
 const TransactionForm = ({ currencies }) => {
   const { dispatch } = useTransactionsContext()
   const { user } = useAuthContext()
-  const [currencyName, setCurrencyName] = useState('')
+  const [currencyName, setCurrencyName] = useState('Bitcoin')
   const [price, setPrice] = useState('')
   const [qty, setQty] = useState('')
   const [error, setError] = useState(null)
@@ -38,7 +38,7 @@ const TransactionForm = ({ currencies }) => {
       setEmptyFields(json.emptyFields)
     }
     if (response.ok) {
-      setCurrencyName('')
+      setCurrencyName('Bitcoin')
       setPrice('')
       setQty('')
       setError(null)
@@ -46,7 +46,6 @@ const TransactionForm = ({ currencies }) => {
       dispatch({ type: 'CREATE_TRANSACTION', payload: json })
     }
   }
-
 
   return (
     <form className="create bg-base-300 m-0 p-4 h-min rounded-2xl" onSubmit={handleSubmit}>
@@ -58,10 +57,10 @@ const TransactionForm = ({ currencies }) => {
         className="select my-2 w-full max-w-xs"
         onChange={(e) => setCurrencyName(e.target.value)}
         >
-        <option disabled selected>Select Currency</option>
         {currencies.map((currency, i) => (
           <option
-            key={i}>
+            key={i}
+            >
             {currency.name}
           </option>
         ))}
