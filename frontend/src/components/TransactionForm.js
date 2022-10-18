@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useTransactionsContext } from "../hooks/useTransactionsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
 
-const TransactionForm = () => {
+const TransactionForm = ({ currencies }) => {
   const { dispatch } = useTransactionsContext()
   const { user } = useAuthContext()
   const [currencyName, setCurrencyName] = useState('')
@@ -10,6 +10,8 @@ const TransactionForm = () => {
   const [qty, setQty] = useState('')
   const [error, setError] = useState(null)
   const [emptyFields, setEmptyFields] = useState([])
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -45,17 +47,34 @@ const TransactionForm = () => {
     }
   }
 
+
   return (
     <form className="create bg-base-300 m-0 p-4 h-min rounded-2xl" onSubmit={handleSubmit}>
       <h3 className="mb-8 text-xl">Add a New Transaction</h3>
 
       <label>Currency Name</label>
-      <input
+      <select
+        value={currencyName}
+        className="select my-2 w-full max-w-xs"
+        onChange={(e) => setCurrencyName(e.target.value)}
+        >
+        <option disabled selected>Select Currency</option>
+        {currencies.map((currency, i) => (
+          <option
+            key={i}>
+            {currency.name}
+          </option>
+        ))}
+      </select>
+
+      {/* save selected option in state */}
+
+      {/* <input
         type="text"
         onChange={(e) => setCurrencyName(e.target.value)}
         value={currencyName}
         className={emptyFields.includes('currencyName') ? 'error' : 'bg-base-100'}
-      />
+      /> */}
 
       <label>Price</label>
       <input

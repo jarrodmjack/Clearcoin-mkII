@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const getTransactions = async (req, res) => {
   const user_id = req.user._id
   const transactions = await Transaction.find({ user_id }).sort({ createdAt: -1 })
-
+  console.log(transactions)
   res.status(200).json(transactions)
 }
 

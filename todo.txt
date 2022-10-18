@@ -1,4 +1,3 @@
-get news API working
-change favicon
+Change transaction coin name input to dropdown of currencies
 fix footer
 update build steps in read me
