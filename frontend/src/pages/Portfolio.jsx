@@ -13,9 +13,7 @@ const Portfolio = () => {
     const navigate = useNavigate()
     const [currencies, setCurrencies] = useState([])
     const [profitOrLoss, setProfitOrLoss] = useState(0)
-    // const [portfolioBalance, setPortfolioBalance] = useState(0)
 
-    // getting transactions from backend for user
     useEffect(() => {
         if (!user) {
             navigate('/login')
@@ -46,7 +44,7 @@ const Portfolio = () => {
 
 
     let portfolioBal = 0;
-    if (transactions && currencies) {
+    if (transactions && currencies.length > 0) {
         portfolioBal = transactions.reduce((acc, trans) => acc + (currencies.find(cur => cur.name === trans.currencyName).current_price - trans.price) * trans.qty, 0).toFixed(2)
     }
 
