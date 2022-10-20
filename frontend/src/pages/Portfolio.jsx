@@ -45,11 +45,24 @@ const Portfolio = () => {
     }, [dispatch, user])
 
 
+    let portfolioBal = 0;
+    if (transactions && currencies) {
+        portfolioBal = transactions.reduce((acc, trans) => acc + (currencies.find(cur => cur.name === trans.currencyName).current_price - trans.price) * trans.qty, 0).toFixed(2)
+    }
+
     return (
-        <>
-            <h1>Portfolio Balance ${transactions && transactions.reduce((acc, c) => acc + (c.price * c.qty), 0)}CAD</h1>
-            <h2>Total Change ${transactions && currencies && transactions.reduce((acc, trans) => acc + (trans.price - currencies.find(cur => cur.name === trans.currencyName).current_price) * trans.qty, 0).toFixed(2)}CAD</h2>
-            <div className="home">
+        <div>
+            <div className='flex mb-10 justify-center sm:justify-start sm:w-1/2'>
+                <div className='flex flex-col text-center p-2 sm:p-8 bg-base-300 rounded-2xl mr-10'>
+                    <span className=' text-white sm:text-2xl'>{transactions && transactions.reduce((acc, c) => acc + (c.price * c.qty), 0)} CAD</span>
+                    <h1 className=''>Portfolio Balance</h1>
+                </div>
+                <div className='flex flex-col text-center p-2 sm:p-8 bg-base-300 rounded-2xl'>
+                    <span className=' text-white sm:text-2xl'>{portfolioBal} CAD</span>
+                    <h2 className=''>Total {portfolioBal >= 0 ? 'Profit' : 'Loss'}</h2>
+                </div>
+            </div>
+            <div className="home flex-col lg:grid">
                 <TransactionForm currencies={currencies} />
                 <div className="transactions">
                     {transactions && transactions.map((transaction) => (
@@ -57,8 +70,7 @@ const Portfolio = () => {
                     ))}
                 </div>
             </div>
-        </>
-
+        </div>
     )
 }
 

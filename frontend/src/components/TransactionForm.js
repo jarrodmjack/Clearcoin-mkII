@@ -48,9 +48,8 @@ const TransactionForm = ({ currencies }) => {
   }
 
   return (
-    <form className="create bg-base-300 m-0 p-4 h-min rounded-2xl" onSubmit={handleSubmit}>
+    <form className="create bg-base-300 m-0 p-4 h-min rounded-2xl mb-10" onSubmit={handleSubmit}>
       <h3 className="mb-8 text-xl">Add a New Transaction</h3>
-
       <label>Currency Name</label>
       <select
         value={currencyName}
