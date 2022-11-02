@@ -1,5 +1,2 @@
-fix footer
-update build steps in read me
-brighten text (hard to read on grey background)
-put target_blank on news linked
-add sort functionality to table
+add pagination to home table
+

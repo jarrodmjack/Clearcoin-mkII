@@ -29,17 +29,17 @@ const TopExchangesSection = () => {
                 <div className='flex gap-4'>
                     <span className=''>📊</span>
                     <p>{trendingExchanges[0].name}</p>
-                    <p className='text-xs text-gray-500'>{trendingExchanges[0].trade_volume_24h_btc.toFixed(2)}btc</p>
+                    <p className='text-xs text-gray-500 text-right'>{trendingExchanges[0].trade_volume_24h_btc.toFixed(2)}btc</p>
                 </div>
                 <div className='flex gap-4'>
                     <span className=''>📊</span>
                     <p>{trendingExchanges[1].name}</p>
-                    <p className='text-xs text-gray-500'>{trendingExchanges[1].trade_volume_24h_btc.toFixed(2)}btc</p>
+                    <p className='text-xs text-gray-500 text-right'>{trendingExchanges[1].trade_volume_24h_btc.toFixed(2)}btc</p>
                 </div>
                 <div className='flex gap-4'>
                     <span className=''>📊</span>
                     <p>{trendingExchanges[2].name}</p>
-                    <p className='text-xs text-gray-500'>{trendingExchanges[2].trade_volume_24h_btc.toFixed(2)}btc</p>
+                    <p className='text-xs text-gray-500 text-right'>{trendingExchanges[2].trade_volume_24h_btc.toFixed(2)}btc</p>
                 </div>
             </div>
         </div>

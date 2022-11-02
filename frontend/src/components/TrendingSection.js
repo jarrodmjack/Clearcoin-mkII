@@ -26,17 +26,17 @@ const TrendingSection = () => {
                 <div className='flex gap-4'>
                     <span className=''>🚀</span>
                     <p>{trendingCurrencies[0].item.name}</p>
-                    <p className='text-xs text-gray-500'>{trendingCurrencies[0].item.symbol}</p>
+                    <p className='text-xs text-gray-500 text-right'>{trendingCurrencies[0].item.symbol}</p>
                 </div>
                 <div className='flex gap-4'>
                     <span className=''>🚀</span>
                     <p>{trendingCurrencies[1].item.name}</p>
-                    <p className='text-xs text-gray-500'>{trendingCurrencies[1].item.symbol}</p>
+                    <p className='text-xs text-gray-500 text-right'>{trendingCurrencies[1].item.symbol}</p>
                 </div>
                 <div className='flex gap-4'>
                     <span className=''>🚀</span>
                     <p>{trendingCurrencies[2].item.name}</p>
-                    <p className='text-xs text-gray-500'>{trendingCurrencies[2].item.symbol}</p>
+                    <p className='text-xs text-gray-500 text-right'>{trendingCurrencies[2].item.symbol}</p>
                 </div>
             </div>
         </div>

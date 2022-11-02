@@ -44,8 +44,6 @@ const Table = () => {
         }
     }
 
-
-
     return (
         <div className="overflow-x-auto">
             <table
@@ -71,5 +69,4 @@ const Table = () => {
         </div>
     )
 }
-
 export default Table

@@ -10,6 +10,7 @@ const Home = () => {
             <GlobalCurrencyData />
             <TripleSectionContent />
             <Table />
+            <h4 className='py-4 text-center'>Why did you scroll all the way down? You can just sort the table 😉</h4>
         </div>
  )
 }
