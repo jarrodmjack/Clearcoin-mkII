@@ -4,7 +4,7 @@ const TableRow = ({ currency }) => {
       <tr className="hover cursor-pointer">
         
           <td><img className="h-10 w-10" src={currency.image} alt="" /></td>
-          <td><a href={`https://google.com/search?q=${currency.name}`}>{currency.name}</a></td>
+          <td><a className='text-white' target="_blank" href={`https://google.com/search?q=${currency.name}`}>{currency.name}</a></td>
           <td>${currency.current_price.toLocaleString()}</td>
           <td>${currency.market_cap.toLocaleString()}</td>
           <td>{currency.circulating_supply.toLocaleString()}</td>
