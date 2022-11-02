@@ -29,6 +29,8 @@ const Portfolio = () => {
                 const json = await response.json()
                 if (response.ok) {
                     dispatch({ type: 'SET_TRANSACTIONS', payload: json })
+                }else{
+                    navigate('/login')
                 }
             }
             fetchTransactions()
@@ -50,7 +52,7 @@ const Portfolio = () => {
 
     return (
         <div>
-            <div className='flex mb-10 justify-center sm:justify-start sm:w-1/2'>
+            <div className='flex my-10 justify-center sm:justify-start sm:w-1/2'>
                 <div className='flex flex-col text-center p-2 sm:p-8 bg-base-300 rounded-2xl mr-10'>
                     <span className=' text-white sm:text-2xl'>{transactions && transactions.reduce((acc, c) => acc + (c.price * c.qty), 0)} CAD</span>
                     <h1 className=''>Portfolio Balance</h1>

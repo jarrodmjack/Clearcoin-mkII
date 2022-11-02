@@ -26,7 +26,7 @@ const FearAndGreed = () => {
 
     return (
         <div className=''>
-            <h1 className='text-center text-2xl mb-20'>Today's market sentiment is <span className='font-bold'>{todaysFGSentiment}</span> which may indicate a good <span className='font-bold'>{todaysFGIndex >= 50 ? 'selling' : 'buying'} opportunity.</span></h1>
+            <h1 className='text-center text-2xl my-20'>Today's market sentiment is <span className='font-bold'>{todaysFGSentiment}</span> which may indicate a good <span className='font-bold'>{todaysFGIndex >= 50 ? 'selling' : 'buying'} opportunity.</span></h1>
             <div className='flex flex-wrap justify-around mb-20'>
                 <FearAndGreedIndex />
                 <FearAndGreedHistory history={fearGreedHistory} />

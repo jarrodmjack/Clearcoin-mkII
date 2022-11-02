@@ -1,2 +1,2 @@
 add pagination to home table
-
+fix token expiration causing portfolio to crash
