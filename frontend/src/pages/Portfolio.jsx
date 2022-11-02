@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { useTransactionsContext } from "../hooks/useTransactionsContext"
 import { useAuthContext } from '../hooks/useAuthContext'
 import { useNavigate } from 'react-router-dom'
+import { useLogout } from '../hooks/useLogout'
 
 // components
 import TransactionDetails from '../components/TransactionDetails'
 import TransactionForm from '../components/TransactionForm'
 
 const Portfolio = () => {
+    const { logout } = useLogout()
     const { transactions, dispatch } = useTransactionsContext()
     const { user } = useAuthContext()
     const navigate = useNavigate()
@@ -29,8 +31,8 @@ const Portfolio = () => {
                 const json = await response.json()
                 if (response.ok) {
                     dispatch({ type: 'SET_TRANSACTIONS', payload: json })
-                }else{
-                    navigate('/login')
+                } else {
+                    logout()
                 }
             }
             fetchTransactions()

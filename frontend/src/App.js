@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App bg-base-100">
       <BrowserRouter>
-      <CurrencyCarousel />
+        <CurrencyCarousel />
         <Navbar />
         <div className="pages">
           <Routes>
@@ -34,7 +34,7 @@ function App() {
               path="/news"
               element={<News />}
             />
-             <Route
+            <Route
               path="/portfolio"
               element={<Portfolio />}
             />
