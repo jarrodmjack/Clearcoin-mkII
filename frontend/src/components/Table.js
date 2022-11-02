@@ -15,9 +15,6 @@ const Table = () => {
         }
         fetchCurrencyData()
     }, [])
-
-    console.log(currencies)
-
     const handleSort = (e) => {
         let sortedCurrencies
         switch (e.target.id) {
