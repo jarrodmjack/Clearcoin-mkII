@@ -1,9 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 
-
 const GlobalCurrencyData = () => {
-
     const [globalMarketCap, setGlobalMarketCap] = useState(0)
     const [mcapChangePercent, setMcapChangePercent] = useState(0)
     const [globalMarketData, setGlobalMarketData] = useState()
@@ -12,6 +10,7 @@ const GlobalCurrencyData = () => {
         style: 'currency',
         currency: 'CAD'
     })
+
     useEffect(() => {
         const fetchGlobalCurrencyData = async () => {
             const res = await fetch('https://api.coingecko.com/api/v3/global')
@@ -26,19 +25,14 @@ const GlobalCurrencyData = () => {
 
     if (globalMarketCap && globalMarketData) {
         return (
-            <div className='flex justify-around bg-base-200 p-10'>
+            <div className='justify-around bg-base-200 hidden p-10 lg:flex'>
                 <p>Market Cap: <span className='text-accent'>{formatter.format(globalMarketCap)}</span></p>
                 <p>Volume: <span className='text-accent'>{formatter.format(globalMarketData.total_volume.cad)}</span></p>
                 <p>Currencies: <span className='text-accent'>{Intl.NumberFormat('en', {notation: 'compact'}).format(globalMarketData.active_cryptocurrencies)}</span></p>
                 <p>Ongoing ICO's: <span className='text-accent'>{globalMarketData.ongoing_icos}</span></p>
                 <p>Exchanges: <span className='text-accent'>{globalMarketData.markets}</span></p>
-                {/* <p>Currencies: <span className='text-accent'>{globalMarketData.active_cryptocurrencies}</span></p> */}
             </div>
-            // <div className='text-center text-2xl'>
-            //     <p className=''>The global cryptocurrency market cap is <span className='font-bold'>${globalMarketCap.toLocaleString()}</span> CAD, a change of <span style={{color: `${isMcapPositive ? 'lime' : 'red'}`}}>{mcapChangePercent.toFixed(2)}%</span> in the last 24 hours.</p>
-            // </div>
         )
     }
 }
-
 export default GlobalCurrencyData
