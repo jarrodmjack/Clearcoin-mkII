@@ -1,2 +1,1 @@
-add pagination to home table
-fix token expiration causing portfolio to crash
+Change global currency data on home page to disappear after certain width
