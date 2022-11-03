@@ -149,8 +149,10 @@
 
 - [x] Convert project from EJS to React
 - [x] Make fully responsive 
-- [ ] Implement news route/page
-    - [ ] Use Bing Search API
+- [x] Implement news route/page
+    - [x] Use Bing Search API
+- [ ] Add Exchanges Route/Page to display exchange info as a table
+- [ ] Add Pagination to home page table
 
 See the [open issues](https://github.com/jarrodmjack/Clearcoin-mkII/issues) for a full list of proposed features (and known issues).
 
