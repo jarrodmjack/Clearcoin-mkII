@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import axios from "axios"
-import TableRow from './TableRow'
+import TableRow from './CurrenciesTableRow'
 
 
 const Table = () => {

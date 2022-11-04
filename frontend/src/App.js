@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import CurrencyCarousel from './components/CurrencyCarousel'
 import News from './pages/News'
 import FearAndGreed from './pages/FearAndGreed'
+import Exchanges from './pages/Exchanges'
 
 function App() {
   const { user } = useAuthContext()
@@ -25,6 +26,10 @@ function App() {
             <Route
               path="/"
               element={<Home />}
+            />
+            <Route
+              path="/exchanges"
+              element={<Exchanges />}
             />
             <Route
               path="/fgindex"

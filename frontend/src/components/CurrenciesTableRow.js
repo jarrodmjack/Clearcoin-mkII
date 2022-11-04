@@ -1,6 +1,4 @@
 const TableRow = ({ currency }) => {
-  console.log(currency.current_price)
-
   return (
     <tr className="hover cursor-pointer border-t-2 border-slate-700">
 
