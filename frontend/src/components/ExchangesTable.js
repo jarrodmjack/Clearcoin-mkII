@@ -12,8 +12,8 @@ const ExchangesTable = ({ exchanges }) => {
                     <tr>
                         <th>Symb</th>
                         <th>Exchange</th>
+                        <th>Origin</th>
                         <th>Trust Score</th>
-                        <th>24h Volume (BTC)</th>
                         <th>24h Volume (BTC)</th>
                     </tr>
                 </thead>

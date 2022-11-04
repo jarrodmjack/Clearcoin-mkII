@@ -9,11 +9,11 @@ const ExchangesTableRow = ({ exchange }) => {
             <td>
                 <a className='text-white' href={exchange.url} target="_blank">{exchange.name}</a>
             </td>
+            <td>{!exchange.country ? "N/A" : exchange.country}</td>
             <td className=''>
                 <progress  className="progress progress-accent w-32 mr-2" value={exchange.trust_score} max={10}></progress>
                 {exchange.trust_score}
             </td>
-            <td>{exchange.trade_volume_24h_btc.toFixed(3)}</td>
             <td>{exchange.trade_volume_24h_btc.toFixed(3)}</td>
         </tr>
     )
