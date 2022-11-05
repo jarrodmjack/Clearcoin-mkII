@@ -1,1 +1,3 @@
-Change global currency data on home page to disappear after certain width
+Fix news title text at small screen width
+Change news links to open in new tab
+Add exchange link to navbar when user is logged in

@@ -23,12 +23,12 @@ const News = () => {
         <div className='mt-10'>
             <h1 className='text-2xl'>Like crypto news? Here is the latest in crypto news</h1>
             {news.map((article, i) => (
-                <a className='' href={article.url}>
+                <a className='' href={article.url} target="_blank">
                 <div key={i} className="hoverBox card card-side h-40 bg-base-300 shadow-xl my-10">
                     <figure><img className='h-full w-36' src={article.image ? article.image.thumbnail.contentUrl : img} alt="Movie" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title ">{article.name}</h2>
-                        <p>{article.description}</p>
+                        <h2 className="card-title text-white text-sm sm:text-xl">{article.name}</h2>
+                        <p className='hidden sm:block'>{article.description}</p>
                     </div>
                 </div>
                 </a>
