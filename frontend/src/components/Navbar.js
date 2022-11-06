@@ -22,8 +22,10 @@ const Navbar = () => {
         <nav>
           {user && (
             <div className=''>
-              {/* <span>{user.email}</span> */}
               <div className='hidden lg:block'>
+              <Link to='/exchanges'>
+                  <p className='btn btn-ghost text-white'>Exchanges</p>
+                </Link>
                 <Link to='/fgindex'>
                   <p className='btn btn-ghost text-white'>Market Sentiment</p>
                 </Link>

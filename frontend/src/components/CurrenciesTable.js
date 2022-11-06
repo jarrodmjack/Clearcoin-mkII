@@ -12,6 +12,7 @@ const Table = () => {
     const [currenciesPerPage, setCurrenciesPerPage] = useState(16)
     const [sortedAscending, setSortedAscending] = useState({ col: "", asc: false })
 
+
     useEffect(() => {
         const fetchCurrencyData = async () => {
             setLoading(true)
@@ -21,8 +22,6 @@ const Table = () => {
         }
         fetchCurrencyData()
     }, [])
-
-
 
     const handleSort = (e) => {
         let sortedCurrencies
@@ -59,8 +58,9 @@ const Table = () => {
     const currentCurrencies = currencies.slice(indexOfFirstCurrency, indexOfLastCurrency)
 
     // CHANGE PAGE
-    const paginate = (pageNumber) => setCurrentPage(pageNumber)
-
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber)
+    }
 
     if (loading) {
         return <h2>Loading...</h2>
@@ -87,7 +87,7 @@ const Table = () => {
                         ))}
                     </tbody>
                 </table>
-                <Pagination currenciesPerPage={currenciesPerPage} totalCurrencies={currencies.length} paginate={paginate} />
+                <Pagination currenciesPerPage={currenciesPerPage} totalCurrencies={currencies.length} paginate={paginate} currentPage={currentPage} />
             </div>
         )
     }

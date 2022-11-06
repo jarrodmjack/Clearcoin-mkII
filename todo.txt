@@ -1,3 +1,2 @@
-Fix news title text at small screen width
-Change news links to open in new tab
-Add exchange link to navbar when user is logged in
+Add sort to exchanges table
+Add pagination to exchanges table with active button selector
