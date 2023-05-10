@@ -25,6 +25,7 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+THIS PROJECT IS CURRENT INACTIVE DUE TO HEROKU KILLING THEIR FREE TIERS
 
 
 <!-- PROJECT LOGO -->
